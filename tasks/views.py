@@ -22,6 +22,9 @@ def index(request):
     context = {'tasks': tasks}
     return render(request, 'index.html', context)
 
+def about(request):
+    return render(request, "about.html")
+
 def edittask(request, pk):
     if request.method == "POST":
         newtitle = request.POST.get('title')
